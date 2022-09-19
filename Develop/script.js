@@ -25,10 +25,9 @@ function generatePassword() {
         console.log(password)
         console.log(i)
         var randomNumber = Math.floor(Math.random() * passChars.length);
-        password = password.concat(passChars.substring(randomNumber, 1));
-        //randomNumber finds the spot in the array.  The 1 says how many to take starting at that spot
+        password = password.concat(passChars.charAt(randomNumber));
         console.log(password)
-        console.log(randomNumber)                                                                                                                                                                               
+        console.log(randomNumber)                                                                                                                                                                                  
     }
     return password;
 }

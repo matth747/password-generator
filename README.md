@@ -12,7 +12,7 @@
 
 Click the 'Generate Password', select password length select characters to include and your password will be created.
 
-![alt text](./Develop/assets/CH3-screenshot.jpg)
+![alt text](./Develop/assets/images/CH3-screenshot.jpg)
 
 ## Credits
 

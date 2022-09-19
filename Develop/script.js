@@ -5,10 +5,12 @@ function generatePassword() {
     var passChars = ''
     var password = ''
     var passLength = prompt('Please pick a password length 8 or higher and no more than 128',)
+    //asked how long the password should be and assigned it to a var
     if (passLength >= 8 && passLength <=128) { 
         alert("thanks!")
         console.log(passLength)
     } else {generatePassword()}
+    //4 if statements ask which characters to include
     var upperLetters = confirm("would you like to include uppercase characters? click OK for yes or cancel for no")
     if (upperLetters === true) {passChars = passChars + "ABCDEFGHIJKLMNOPQRSTUVWXYZ"}
     
@@ -19,8 +21,14 @@ function generatePassword() {
     if (specialChars === true) {passChars = passChars + "!\"#&%&'()*+,-./:;<=>?@[]^_`{|}~"}
     
     var numChars = confirm("would you like to include numeric characters? click OK for yes or cancel for no")
-    if (numChars === true) (passChars = passChars + "0123456789")
+    if (numChars === true) {passChars = passChars + "0123456789"}
     console.log(passChars)
+    //if the user doesn't select any char types they will be asked to try again generatePassword starts over
+    if (passChars === '') {alert('please try again and select at least one character type')
+    generatePassword()
+    }
+    //for loop runs as many times as passLength var says.   
+    //Each time through it picks a random character out of the pool represented by passChars.
     for (var i = 0; i <= passLength; i++) {
         console.log(password)
         console.log(i)
